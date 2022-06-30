@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<hr lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon</title>
+  <link rel="stylesheet" href="../src/Styles/index.css"/>
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootsrap.css">
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body {
+    height: 100;
+  }
+  section {
+    height: 100;
+  }
+  nav {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 15px 4px 10px;
+  }
+  .dflex {
+    display: flex;
+    align-items: center;
+  }
+  .item {
+    padding: 10px 10px;
+  }
+  .item:hover {
+    border: 1px solid #fff;
+    border-radius: 2px;
+    margin: -1px;
+  }
+  .logo {
+    text-align: center;
+    margin: 1px;
+    margin-bottom: -5px;
+    padding: 6px 8px 0px 0px;
+    height: 42px;
+  }
+  a {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 5px 5px 5px;
+  }
+  a:hover {
+    border: 1px solid #fff;
+    margin: -1px;
+    border-radius: 3px;
+  }
+  a span {
+    font-size: 14px;
+    margin-left: -10px;
+  }
+  p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .item i {
+    padding: 0 3px;
+  }
+  nav input {
+    width: 550px;
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: black;
+  }
+  nav button {
+    padding: 10px 10px;
+    color: black;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    cursor: pointer;
+  }
+  nav .all {
+    background: #ddd;
+    border-radius: 5px 0px 0px 5px;
+  }
+  nav .search {
+    padding: 10px 17px;
+    margin: -2px;
+    background: rgb(247, 155, 80);
+    border-radius: 0px 5px 5px 0px;
+  }
+  nav .search i,
+  nav .all i {
+    color: black;
+  }
+  
+  .box:hover {
+    border: 4px solid rgb(247, 155, 80);
+    box-shadow: 0px 0px 3px 0px rgb(247, 155, 80);
+    border-radius: 10px;
+  }
+  .subnavigation {
+    background-color: #232f3e;
+    padding: 6px 15px;
+    display: flex;
+  }
+  .submenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  ul li {
+    list-style: none;
+    font-weight: 400;
+    padding: 1px 5px;
+    font-size: 14px;
+  }
+  nav submenu i {
+    font-size: 16px;
+    display: flex;
+  }
+  .li {
+    margin: -5px;
+    font-size: 20px;
+  }
+  .bg {
+    position: relative;
+    padding: 6px 6px;
+    margin: -5px 0;
+    margin-right: 10px;
+    background-color: rgb(247, 155, 80);
+  }
+  section {
+    margin-top: 80px;
+  }
+  
+  #aside {
+    width: 100%;
+    height: 250px;
+    margin-top: 100px;
+    margin-bottom: 110px;
+  }
+  #aside img {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .aside2 {
+    height: 70px;
+    margin-top: 60px;
+    width:1150px;
+    border-radius: 5px;
+    margin-left: 50px;
+    padding: 20px;
+    text-align: left;
+    background-color:rgba(255, 166, 0, 0.685);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    box-shadow: 1px 1px 1px 1px gray;
+  }
+  .aside2:hover{
+    text-rendering: geometricPrecision;
+  }
+  
+  .aside2 a {
+    color: #000;
+  }
+  
+  .aside2 a:hover {
+    color: rgb(15, 50, 145);
+    transition: 3s;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    margin-left: 50px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  
+  .card {
+    margin-top: 60px;
+    height: 300px;
+    width: 250px;
+    border-radius: 3px;
+    position: static;
+    box-shadow: 1px 1px 1px 1px gray;
+  }
+  .card-body {
+    height: 250px;
+    width: 250px;
+  }
+  
+  .card-body img {
+   
+    width: 100%;
+    height: 200px;
+    padding: 30px;
+    border: 1px solid rgb(226, 226, 226);
+  }
+  
+  .card-footer {
+    background-color: white;
+    height: 50px;
+    padding: 15px;
+    text-align: center;
+  }
+  .card-footer a {
+    color: #000;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  
+  .card-footer a:hover {
+    color: rgb(55, 99, 218);
+  }
+  .card img:hover{
+    transition: 2s;
+    width: 150px;
+    max-height: 150;
+  }
+  .img{
+    border: 1px solid gray;
+  }
+  
+  .card_2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin-right: 120px;
+    background-color: white;
+    margin-top: 60px;
+    box-shadow: 1px 1px 1px 1px gray;
+  }
+  .card_2 img {
+    width: 100%;
+    height: 200px;
+    border-image: 100px;
+    padding: 30px;
+  }
+  .img{
+    border: 1px solid gray;
+  }
+  .card_2 img:hover{
+    transition: 2s;
+    width: 150px;
+    max-height: 150;
+  }
+  
+  .card_3 {
+    margin-top: 60px;
+    height: 280px;
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px gray;
+  }
+  .card_3 img:hover{
+    transition: 2s;
+    width: 150px;
+    max-height: 150;
+  }
+  .card_3 img {
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+    padding: 30px;
+  }
+  .img{
+    border: 1px solid gray;
+  }
+  
+  .card_4 {
+    margin-top: 60px;
+    height: 200px;
+    width: 250px;
+    background-color: white;
+    border-radius: 100px;
+    box-shadow: 1px 1px 1px 1px gray;
+  }
+  .card_4 img:hover{
+    transition: 2s;
+    width: 150px;
+    max-height: 150;
+  }
+  .card_4 img {
+    padding: 30px;
+    width: 100%;
+    height: 200px;
+    border-radius: 50px;
+  }
+
+  
+  .card_5 {
+    height: 400px;
+    width: 350px;
+    border-radius: 10px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 1px 1px 1px 1px gray;
+  }
+  
+  .card_5 img {
+    margin-left: 5px;
+    margin-top: 10px;
+    border-radius: 100px;
+    width: 130px;
+    height: 130px;
+    padding: 10px;
+  }
+  
+  .card_5 span {
+    display: block;
+    text-align: center;
+    color: #000;
+    font-size: 13px;
+  }
+  .card_5 span:hover {
+    color: rgb(55, 99, 218);
+    margin-top: 0px;
+  }
+  .card_5 img:hover{
+    transition: 2s;
+    width: 150px;
+    max-height: 150;
+  }
+  .card_6 {
+    height: 350px;
+    width: 300px;
+    border-radius: 5px;
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 1px 1px 1px 1px grey;
+  }
+  
+  .card_6 img {
+    margin-left: 5px;
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+  }
+  
+  .card_6 span {
+    display: block;
+    text-align: center;
+    color: #000;
+    font-size: 15px;
+  }
+  .card_6 span:hover {
+    color: rgb(55, 218, 150);
+    margin-top: 0px;
+  }
+  .card_6 img:hover{
+    transition: 2s;
+    width: 150px;
+    max-height: 150;
+  }
+  #top{
+       
+    background-color: #435163;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px;
+}
+footer{
+    height: 400px;
+    background-color: #232f3f;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    color: white;
+    padding: 20px;
+    min-width: 1000px;
+    position: relative;
+
+}
+
+div{
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     padding: 5px;
+     
+     }
+   
+   #col-1{
+
+    margin-left: 200px;
+    padding: -20px;
+    }
+  #col-2{
+      margin-left: 100px;
+
+    }
+  #col-4{
+
+    margin-right: 100px;
+    }
+   
+    
+    footer ul {
+      list-style: none;
+    }
+    
+    footer a {
+      color:rgb(85, 61, 61);
+    }
+    
+    footer a:hover {
+      color: rgb(55, 99, 218);
+    }
+    
+    .foot_containt {
+      margin-right: 50px;
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+    
+    footer span {
+      margin-right: 20px;
+      font-size: 15px;
+    }
+    
+    .return {
+      margin-bottom: 30px;
+    }
+    h3{
+      background-color: rgb(109, 44, 44);
+      text-shadow: #435163;
+      color: #fff;
+      font-weight: bold;
+      font-style: italic;
+      width: fit-content;
+      height: fit-content;
+      border: #000;
+      box-shadow: #000;
+      align-items: center;
+    }
+    .login{
+      background-color: rgb(109, 44, 44);
+      text-shadow: #435163;
+      color: #fff;
+      font-weight: bold;
+      font-style: italic;
+      width: fit-content;
+      height: fit-content;
+      border: #000;
+      box-shadow: #000;
+      align-items: center;
+     
+    }
+    .link{
+      font-family: Arial, Helvetica, sans-serif;
+      color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <nav>
+    <div class="left dflex">
+      <a href="#"><img src="../public/images/amazonlogo.jpg" alt="logo" class="logo" /></a>
+      <div class="item">
+        <p><i class="bi bi-"></i>hello,</p>
+        <h5>enter your address</h5>
+      </div>
+    </div>
+    <div class="searchBox dflex">
+      <div class="box">
+        <div class="dflex">
+          <button type="submit" class="all">
+            All <i class="bi bi-sort-desc"></i>
+          </button>
+          <input type="text" />
+          <button type="submit" class="search">
+            <i class="bi bi-search "></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="right dflex">
+      <div class="item">
+        <i class="bi bi-flag"></i><i class="bi bi-sort-desc"></i>  
+    
+              <select name="City" class="form-select" >
+                  <option>Delhi</option>
+                  <option>Hyd</option>
+              </select>
+        
+      </div>
+      <div class="item">
+        <p>Hello,</p>
+        <h5>Account & Lists<i class="bi bi-sort-desc"></i></h5>
+      </div>
+      <div class="item">
+        <p>Returns</p>
+        <h5>& Order</h5>
+      </div>
+      <div class="item"><i class="bi bi-cart4 "></i>Cart</div>
+    </div>
+  </nav>
+  <nav class="subnavigation">
+    <ul class="submenu">
+      <a href="#"><i class="bi bi-bars"></i>
+        <li>All</li>
+      </a>
+      <a href="#">
+        <li>Best Sellers</li>
+      </a>
+      <a href="#">
+        <li>Mobiles</li>
+      </a>
+      <a href="#">
+        <li>Today's Deals<i class="bi bi-sort-desc"></i></li>
+      </a>
+      <a href="#">
+        <li>Customer Service</li>
+      </a>
+      <a href="#">
+        <li>Electronics</li>
+      </a>
+      <a href="#">
+        <li>Books</li>
+      </a>
+      <a href="#">
+        <li>Prime</li>
+      </a>
+      <a href="#">
+        <li>Fashion</li>
+      </a>
+      <a href="#">
+        <li>Home & Kitchen</li>
+      </a>
+      <a href="#">
+        <li>Amazon Pay</li>
+      </a><a href="#">
+        <li>Computers</li>
+      </a>
+      <a href="#">
+        <li>Copuons</li>result
+      </a>
+    </ul>
+    <ul>
+      <a href="#"><i class="bi bi-amazon bg"></i>
+        <li class="li">Shopping made easy|Download the app</li>
+      </a>
+    </ul>
+  </nav>
+</header>
+<section>
+  <aside id="aside"><img src="../public/images/gif/banner7.jpg" /></aside>
+  <main>
+    <div class="card_6"> 
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/electric bill.jpg" /> <span></a>
+          <span>Electric bill</span>
+     
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/LPG.jpg" /></a>
+          <span>LPG gas cylinder</span>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/Broadband bill.jpg" /></a>
+          <span> Broadband bill</span>
+  
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/Water bill.jpg" /></a>
+          <span>Water Bill</span>
+      </div>
+    </div>
+
+    <div class="card_6">
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/Fresh..jpg" /> </a>
+          <span>Fresh</span>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/m.jpg" /></a>
+          <span>Electronics</span>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/mobile.jpg" /></a>
+          <span>Mobiles</span>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/Fashion..jpg" /></a>
+          <span>Fashion</span>
+      </div>
+    </div>
+
+    <div class="card_6">
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/Clearance_store_Des.jpg" height="350px" width="250px"/></a>
+          <span>Electronics</span>
+      
+      </div>
+      
+    </div>
+
+    <div class="card_6">
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/ac's.jpg" /></a>
+          <span>AC's</span>
+        
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/refrigerator.jpg" /></a>
+          <span>
+           Refrigerator
+          </span>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/microwaves.jpg" /></a>
+          <span>Microwaves</span> 
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/washing michnes.jpg" /></a>
+          <span >Washing Michnes</span>
+      </div>
+       
+      </div>
+    <div class="card">
+      <div class="card-body">
+        <a href="#"><img src="../public/images/gif/Brown_shoes.gif" /></a>
+      </div>
+      <div class="card-footer">
+        <span><a href="#">Brown Sheo</a></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <a href="#"><img src="../public/images/gif/Brown_shoes_2.gif" /></a>
+      </div>
+      <div class="card-footer">
+        <span><a href="#">Nike Shoes</a></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <a href="#"><img src="../public/images/shirt1.jpg" /></a>
+      </div>
+      <div class="card-footer">
+        <span><a href="#">T-Shirt</a></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <a href="#"><img src="../public/images/gif/books1.jpg" /></a>
+      </div>
+      <div class="card-footer">
+        <span><a href="#">Book</a></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <a href="#"><img src="../public/images/daily essential.jpg" /></a>
+      </div>
+      <div class="card-footer">
+        <span><a href="#">Daily Essential</a></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <a href="#"><img src="../public/images/furniture.jpg" /></a>
+      </div>
+      <div class="card-footer">
+        <span><a href="#">Funitures</a></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <a href="#"><img src="../public/images/watch2.jpeg" /></a>
+      </div>
+      <div class="card-footer">
+        <span><a href="#">Eddyanger Watches</a></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <a href="#"><img src="../public/images/image10.jpg" /></a>
+      </div>
+      <div class="card-footer">
+        <span><a href="#">Vechile Cleaners</a></span>
+      </div>
+    </div>
+  </main>
+
+  <aside class="aside2">
+    <span><a href="#">Up to 50% off on kitchen & dining products | Small businesses</a></span>
+  </aside>
+
+  <main>
+    <div class="card_2">
+      
+      <div>
+        <a href="#"><img src="../public/images/gif/k1.jpg" /></a>
+      </div>
+    </div>
+
+    <div class="card_2">
+      <div>
+        <a href="#"><img src="../public/images/gif/k2.jpg" /></a>
+      </div>
+    </div>
+
+    <div class="card_2">
+      <div>
+        <a href="#"><img src="../public/images/gif/k3.jpg" /></a>
+      </div>
+    </div>
+
+    <div class="card_2">
+      <div>
+        <a href="#"><img src="../public/images/gif/k4.jpg" /></a>
+      </div>
+    </div>
+
+    <div class="card_2">
+      <div>
+        <a href="#"><img src="../public/images/gif/k5.jpg" /></a>
+      </div>
+    </div>
+
+    <div class="card_2">
+      <div>
+        <a href="#"><img src="../public/images/gif/k6.jpg" /></a>
+      </div>
+    </div>
+
+    <div class="card_2">
+      <div>
+        <a href="#"><img src="../public/images/gif/k7.jpg" /></a>
+      </div>
+    </div>
+
+    <div class="card_2">
+      <div>
+        <a href="#"><img src="../public/images/gif/k8.jpg" /></a>
+      </div>
+    </div>
+  </main>
+
+  <aside class="aside2">
+    <a href="#">Explore everyday essentials</a>
+  </aside>
+
+  <main>
+    <div class="card_3">
+      <a href="#"><img src="../public/images/gif/e1.jpg" /></a>
+    </div>
+
+    <div class="card_3">
+      <a href="#"><img src="../public/images/gif/e2.jpg" /></a>
+    </div>
+
+    <div class="card_3">
+      <a href="#"><img src="../public/images/gif/e3.jpg" /></a>
+    </div>
+
+    <div class="card_3">
+      <a href="#"><img src="../public/images/gif/e6.jpg" /></a>
+    </div>
+    <div class="card_3">
+      <a href="#"><img src="../public/images/gif/e8.jpg" /></a>
+    </div>
+    <div class="card_3">
+      <a href="#"><img src="../public/images/gif/e4.jpg" /></a>
+    </div>
+    <div class="card_3">
+      <a href="#"><img src="../public/images/gif/e7.jpg" /></a>
+    </div>
+    <div class="card_3">
+      <a href="#"><img src="../public/images/gif/e9.jpg" /></a>
+    </div>
+  </main>
+
+  <aside class="aside2">
+    <a href="#">Up to 60% off | Tropical hues home furnishing from local shops</a>
+  </aside>
+
+  <main>
+    <div class="card_4">
+      <a href="#"><img src="../public/images/gif/mat1.jpg" /></a>
+    </div>
+
+    <div class="card_4">
+      <a href="#"><img src="../public/images/gif/mat2.jpg" /></a>
+    </div>
+
+    <div class="card_4">
+      <a href="#"><img src="../public/images/gif/mat3.jpg" /></a>
+    </div>
+
+    <div class="card_4">
+      <a href="#"><img src="../public/images/gif/mat5.jpg" /></a>
+    </div>
+  </main>
+
+  <aside class="aside2">
+    <a href="#">Latest Electronics for your Valentine</a>
+  </aside>
+
+  <main>
+    <div class="card_5">
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/tool.jpg" /></a>
+          <span>Professional Tools</span>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/measuring.jpg" /></a>
+          <span>Measuring instruments</span>
+        >
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/cleaning.jpg" /></a>
+          <span>Cleaning Supplies</span>
+        
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/medical.jpg" /></a>
+          <span>Medical Supplies</span>
+      </div>
+    </div>
+
+    <div class="card_5">
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/home.jpg"></a>
+          <span>Home products</span>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/furniture2.jpg" /></a>
+          <span>furniture</span>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/laptop3.jpeg" /></a>
+          <span>Hp</span>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/shirt2.jpg" /></a>
+          <span> Shirt</span>
+          
+        
+      </div>
+    </div>
+
+    <div class="card_5">
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/remote.jpg" /></a>
+          <span>Remote controlcars</span>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/Puzzles.jpg" /></a>
+          <span>Puzzles&educational toys</span>
+          
+        >
+      </div>
+      <div>
+        <a a href=""
+          ><img src="../public/images/gif/BabyToys.jpg" /></a>
+          <span>BabyToys</span>
+        
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/fan.webp" /></a>
+          <span>Fan</span>
+      </div>
+    </div>
+
+    <div class="card_5">
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/sd.jpg" /></a>
+          <span>Sandics pendrive</span>  
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/boat.jpg" /></a>
+          <span>Spekers</span>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/jocket3.jpg" /></a>
+          <span>Jocket</span>
+      </div>
+      <div>
+        <a href=""
+          ><img src="../public/images/gif/silk.jpg" /></a>
+          <span >Valentins Day</span>
+      </div>
+    </div>
+  </main>
+</section>
+<div id="top">
+  <ul> (C)COPY:COPYRIGHTS AMAZON 2020</ul>
+</div>
+
+<footer>
+   <div id="col-1">
+       
+     <div><b>Get to Know us</b></div>
+       <div>About us</div>
+       <div>Careers</div>
+       <div>Press Realeases</div>
+       <div>Amazon cares</div>
+       <div>Gift a smile</div>
+   
+       
+   </div>
+
+
+   <div id="col-2">
+     
+      <div><b>Connect with Us</b></div>
+      <div>Facebook</div>
+      <div>Twitter</div>
+      <div>Instagram</div>
+      <DIV>WHATSAPP</DIV>
+      <div>Linkedin</div>
+      <div class="link">
+      <a href="https://www.google.com/search?q=play+store+image&rlz=1C1CHBD_enIN959IN959&sxsrf=APq-WBswq5emJXvzzqyR7FOZq1otrfabUQ:1645026206620&tbm=isch&source=iu&ictx=1&vet=1&fir=m2R48tQ14ITWJM%252CzVz8tPxrXdWRVM%252C_%253BPRjG650r5-yANM%252CaeANwTPgLkh4iM%252C_%253BE2Ty3BKyw4gxgM%252Clf5c8P75Y01VuM%252C_%253Bw0WkQPXOolcxnM%252CT4DYxmXzK1DY5M%252C_%253BBirGlLKtCDZ7JM%252Cb_hDTKsYb1jp9M%252C_%253BVJ8mN1C8-5rYjM%252CBHeUS9yOKhNnoM%252C_%253BaP4FLLwaVPSEPM%252CBpM4UNO9lE14MM%252C_%253Bi26U3dvb4mwnBM%252CT4DYxmXzK1DY5M%252C_%253BSyGc6-q8X8ljvM%252CEiemYMi_6KmVUM%252C_%253B5Hls0Kfjl6C56M%252Cv0xWSnh-66171M%252C_%253BBO1KBDLrBXV4dM%252Csy1X8kNYxCFipM%252C_%253BQWDCu6zfaYZHgM%252C7Xu7o-zhdljNYM%252C_&usg=AI4_-kSxVU8i8FM5D3INulH9oVTus5duDw&sa=X&ved=2ahUKEwjllcSVyIT2AhXyR2wGHSIuCHcQ9QF6BAgPEAE#imgrc=w0WkQPXOolcxnM"></a>
+    </div>
+      </ul>
+     
+   </div>
+
+
+   <div id="col-3">
+       <div><b>Making Money with Us</b></div>
+       <div>Sell on Amazon</div>
+       <div>Sell on Amazon Accelerator</div>
+       <div>Amazon Globle Selling</div>
+       <div>Become a Affiliate</div>
+       <div>fulfillment by Amazon</div>
+       <div>Advertis your Products</div>
+       <div>Amazon Pay on Merchants</div>
+       
+    </div>
+
+
+   <div id="col-4">
+   
+    <><b>Lets Us Help You</b></
+    <div>Covid-19 and Amazon</div>
+    <div>Your Account</div>
+    <div>Returns Center</div>
+    <div>100% Purchase Protection</div>
+    <div>Amazon App Download</div>
+    <div>Amazon Assistant Download</div>
+    <div>Help</div>
+   </div>
+   <div id="return">
+     <h5><a href="#aside"><b><h3>Back To Top</h3></b></a></h5>
+   </div>
+   <div>
+     <h5 class="login">
+       <a href="../public/amazon signin.html" target="_blank"><b><h3>Log In</h3></b></a>
+     </h5>
+     <h5 class="form">
+      <a href="../public/amazon form.html" target="_blank"><b><h3>Create Account</h3></b></a>
+    </h5>
+   </div>
+</footer>
+</body>
+</html>
